@@ -151,10 +151,8 @@
 
     asyncData({req,redirect}) {
       if (process.server){
-        setTimeout(() => {
-          const user = getUserFromCookie(req);
-          console.log('user', user);
-        }, 4000)
+        const user = getUserFromCookie(req);
+        console.log('user', user);
       }else{
         let user = firebase.auth().currentUser
         if(!user) {

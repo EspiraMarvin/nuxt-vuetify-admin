@@ -38,6 +38,7 @@
       v-model="password"
       :counter="6"
       label="Password"
+      type="password"
       required
       :rules="inputRulesPass"
     ></v-text-field>
