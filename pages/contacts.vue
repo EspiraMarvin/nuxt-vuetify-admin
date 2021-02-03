@@ -151,25 +151,18 @@
 
     asyncData({req,redirect}) {
       if (process.server){
-        const user = getUserFromCookie(req);
-        console.log('user', user);
+        setTimeout(() => {
+          const user = getUserFromCookie(req);
+          console.log('user', user);
+        }, 4000)
       }else{
         let user = firebase.auth().currentUser
         if(!user) {
           redirect('/')
         }
       }
-    },
-
-    computed: {
-
     }
-    // mounted() {
-    //   let user = firebase.auth().currentUser
-    //   if (!user){
-    //     this.$router.push('/')
-    //   }
-    // },
+
   }
 </script>
 
