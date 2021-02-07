@@ -27,12 +27,13 @@
     </v-navigation-drawer>
     </div>
     <v-app-bar
+      v-if="loggedIn === true"
       :clipped-left="clipped"
       fixed
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="loggedIn === true" />
-      <v-toolbar-title class="ml-16" v-text="title" />
+      <v-toolbar-title class="ml-16" v-text="title" v-if="loggedIn === true"/>
       <v-spacer />
       <div v-if="loggedIn === true">
 <!--        username-->
