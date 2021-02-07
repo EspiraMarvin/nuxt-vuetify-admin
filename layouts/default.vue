@@ -140,29 +140,32 @@ export default {
     }
   },
 
-  mounted() {
+
+  beforeCreate() {
     //check current user
     // let currentUser = firebase.auth().currentUser;
     // console.log(currentUser)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        this.user = user;
         this.loggedIn = true;
         this.$router.push('/contacts')
-        // firebase.auth().currentUser.getIdToken(true)
-        // .then(token => {
-        //   Cookies.set('access_token', token)
-        // });
+        firebase.auth().currentUser.getIdToken(true)
+          .then(token => {
+            Cookies.set('access_token', token)
+          });
         console.log("User exists", user);
 
       }else{
         this.loggedIn = false;
         this.$router.push('/')
 
-        // Cookies.remove('access_token');
+        Cookies.remove('access_token');
         console.log("user does not exist", user);
       }
     })
   },
+
   methods: {
     logout(){
       firebase.auth().signOut()

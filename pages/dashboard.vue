@@ -94,6 +94,9 @@
 
 <script>
 
+    import {getUserFromCookie} from "../helpers";
+    import * as firebase from "firebase";
+
     export default {
         name: "dashboard",
       data () {
@@ -107,6 +110,18 @@
           ],
         }
       },
+
+      asyncData({req,redirect}) {
+        if (process.server){
+          const user = getUserFromCookie(req);
+          console.log('user', user);
+        }else{
+          let user = firebase.auth().currentUser
+          if(!user) {
+            redirect('/')
+          }
+        }
+      }
 
     }
 </script>

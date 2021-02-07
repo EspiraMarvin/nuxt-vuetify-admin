@@ -49,6 +49,7 @@
               show-select
               hide-default-footer
             >
+
               <template v-slot:item.image="{ item }">
                 <v-list-item-avatar>
                   <v-img :src="item.avatar"></v-img>
@@ -96,15 +97,15 @@
         headers: [
           {
             text: 'Image',
-            align: 'start',
+            align: 'center',
             sortable: false,
             value: 'image',
           },
-          { text: 'Name', value: 'name' },
-          { text: 'Email ', value: 'email' },
-          { text: 'Contact', value: 'contact' },
-          { text: 'Rating', value: 'rating' },
-          { text: 'Option', value: 'option' },
+          { text: 'Name', value: 'name', align: 'center'},
+          { text: 'Email ', value: 'email', align: 'center' },
+          { text: 'Contact', value: 'contact', align: 'center' },
+          { text: 'Rating', value: 'rating', align: 'center' },
+          { text: 'Option', value: 'option', align: 'center' },
         ],
         contacts: [
           {
