@@ -36,7 +36,7 @@
       <v-spacer />
       <div v-if="loggedIn === true">
 <!--        username-->
- <!--       {{ // $auth.user }} -->
+<!--        WELCOME {{ // user }}-->
  <!--        logout button-->
         <v-btn text @click="logout">Logout</v-btn>
 
@@ -44,7 +44,7 @@
       </div>
       <div v-else>
 <!--        login-->
-        <v-btn text to="/">Login</v-btn>
+<!--        <v-btn text to="/">Login</v-btn>-->
 
 <!--       register-->
 <!--        <v-btn text to="/register">Register</v-btn>-->
@@ -118,13 +118,6 @@ export default {
   },
 
 
-  // created() {
-  //   let user = firebase.auth().currentUser
-  //   if (!user){
-  //     this.$router.push('/')
-  //   }
-  // },
-  //
   asyncData({req,redirect}) {
     if (process.server){
       const user = getUserFromCookie(req);
@@ -158,7 +151,7 @@ export default {
 
       }else{
         this.loggedIn = false;
-        this.$router.push('/')
+        this.$router.push('/');
 
         Cookies.remove('access_token');
         console.log("user does not exist", user);

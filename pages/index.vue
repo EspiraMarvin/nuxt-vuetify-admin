@@ -96,7 +96,7 @@
         let provider = new firebase.auth.TwitterAuthProvider();
         firebase.auth().signInWithPopup(provider)
           .then(result => {
-            // console.log(result)
+            console.log('results twi', result)
             this.$router.push('/contacts')
 
           })
