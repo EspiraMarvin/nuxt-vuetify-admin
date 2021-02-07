@@ -110,7 +110,7 @@
         contacts: [
           {
             name: 'Alice Blue',
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
             email: 'aliceblue@example.com',
             contact: 194803977,
           },
@@ -128,7 +128,7 @@
           },
           {
             name: 'Denis Richard',
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
             email: 'denis@example.com',
             contact: 39121480,
           },
