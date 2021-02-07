@@ -47,7 +47,6 @@
               item-key="name"
               :search="search"
               show-select
-              hide-default-header
               hide-default-footer
             >
               <template v-slot:item.image="{ item }">
