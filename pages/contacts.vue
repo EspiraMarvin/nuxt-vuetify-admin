@@ -133,23 +133,30 @@
           },
           {
             name: 'Bruce Canta',
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
             email: 'bruce@example.com',
             contact: 838569758,
             rating: 'blue'
           },
           {
-            name: 'Denis Richard',
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-            email: 'denis@example.com',
+            name: 'Camelia Lopez',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
+            email: 'camelia@example.com',
             contact: 39121480,
             rating: 'orange'
           },
           {
-            name: 'Mia Wilson',
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-            email: 'mia@example.com',
+            name: 'Denis Richard',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+            email: 'denis@example.com',
             contact: 707670822,
+            rating: 'orange'
+          },
+          {
+            name: 'Mia Wilson',
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+            email: 'mia@example.com',
+            contact: 238546384,
           },
           {
             name: 'Florence Brown',
