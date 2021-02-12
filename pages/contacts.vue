@@ -162,17 +162,17 @@
     },
 
 
-    // asyncData({req,redirect}) {
-    //   if (process.server){
-    //     const user = getUserFromCookie(req);
-    //     console.log('user', user);
-    //   }else{
-    //     let user = firebase.auth().currentUser
-    //     if(!user) {
-    //       redirect('/')
-    //     }
-    //   }
-    // }
+    asyncData({req,redirect}) {
+      if (process.server){
+        const user = getUserFromCookie(req);
+        console.log('user', user);
+      }else{
+        let user = firebase.auth().currentUser
+        if(!user) {
+          redirect('/')
+        }
+      }
+    }
 
   }
 </script>
