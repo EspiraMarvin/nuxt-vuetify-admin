@@ -58,7 +58,7 @@
 
               <template v-slot:item.rating="{ item }">
 
-                <v-icon v-if="item.rating === 'orange'"
+                <v-icon v-if="item.rating === 'rated'"
                   :src="item.rating"
                   center
                   color="orange"
