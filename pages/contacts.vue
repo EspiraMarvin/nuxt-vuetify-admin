@@ -26,7 +26,7 @@
                   <v-spacer />
               <v-fab-transition>
                 <v-btn
-                  color="light-green"
+                  color="#00b3b3"
                   fab
                   dark
                   small
