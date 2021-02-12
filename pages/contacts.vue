@@ -26,7 +26,7 @@
                   <v-spacer />
               <v-fab-transition>
                 <v-btn
-                  color="green"
+                  color="light-green"
                   fab
                   dark
                   small
@@ -58,7 +58,16 @@
 
               <template v-slot:item.rating="{ item }">
 
-                  <v-icon
+                <v-icon v-if="item.rating === 'orange'"
+                  :src="item.rating"
+                  center
+                  color="orange"
+                >
+                  mdi-star
+                </v-icon>
+
+                  <v-icon v-else
+                    :src="item.rating"
                     center
                   >
                     mdi-star
@@ -113,24 +122,28 @@
             avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
             email: 'aliceblue@example.com',
             contact: 194803977,
+            rating: 'orange'
           },
           {
             name: 'Jack Jackson',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
             email: 'jack@example.com',
             contact: 856270960,
+            rating: 'orange'
           },
           {
             name: 'Bruce Canta',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
             email: 'bruce@example.com',
             contact: 838569758,
+            rating: 'blue'
           },
           {
             name: 'Denis Richard',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
             email: 'denis@example.com',
             contact: 39121480,
+            rating: 'orange'
           },
           {
             name: 'Mia Wilson',
@@ -149,17 +162,17 @@
     },
 
 
-    asyncData({req,redirect}) {
-      if (process.server){
-        const user = getUserFromCookie(req);
-        console.log('user', user);
-      }else{
-        let user = firebase.auth().currentUser
-        if(!user) {
-          redirect('/')
-        }
-      }
-    }
+    // asyncData({req,redirect}) {
+    //   if (process.server){
+    //     const user = getUserFromCookie(req);
+    //     console.log('user', user);
+    //   }else{
+    //     let user = firebase.auth().currentUser
+    //     if(!user) {
+    //       redirect('/')
+    //     }
+    //   }
+    // }
 
   }
 </script>
