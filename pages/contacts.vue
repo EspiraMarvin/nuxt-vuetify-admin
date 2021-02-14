@@ -58,7 +58,7 @@
 
               <template v-slot:item.rating="{ item }">
 
-                <v-icon v-if="item.rating === 'rated'"
+                <v-icon v-if="item.rating === true"
                   :src="item.rating"
                   center
                   color="orange"
@@ -122,49 +122,49 @@
             avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
             email: 'aliceblue@example.com',
             contact: 194803977,
-            rating: 'rated'
+            rating: true
           },
           {
             name: 'Jack Jackson',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
             email: 'jack@example.com',
             contact: 856270960,
-            rating: 'rated'
+            rating: true
           },
           {
             name: 'Bruce Canta',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
             email: 'bruce@example.com',
             contact: 838569758,
-            rating: ''
+            rating: false
           },
           {
             name: 'Camelia Lopez',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
             email: 'camelia@example.com',
             contact: 39121480,
-            rating: 'rated'
+            rating: true
           },
           {
             name: 'Denis Richard',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
             email: 'denis@example.com',
             contact: 707670822,
-            rating: ''
+            rating: false
           },
           {
             name: 'Mia Wilson',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
             email: 'mia@example.com',
             contact: 238546384,
-            rating: ''
+            rating: false
           },
           {
             name: 'Florence Brown',
             avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
             email: 'travis@mail.com',
             contact: 906657210,
-            rating: ''
+            rating: false
           }
         ],
       }
